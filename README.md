@@ -89,9 +89,17 @@ This will generate the preprocess images as numpy files in the the preprocess_da
     python VGG_model.py train
     ````
 ### Train Engagement Model
-1. Download and untar the [pretrained model](https://cloudstor.aarnet.edu.au/plus/s/LqqdgwJ69NEdnDS) on the ER dataset
-2. Create a directory called 'model'
+1. Download and untar the pretrained model on the ER dataset
+    ````
+    wget https://cloudstor.aarnet.edu.au/plus/s/LqqdgwJ69NEdnDS/download
+    tar -xzf download
+    ````
+2. Create a directory called 'model' beside 'code' directory
 3. Place the downloaded model in the directory
+    ````
+    mv TF_start/* model/
+    rm -r TF_start
+    ````
 4. Run the model's script:
     ````
    # Specify the name of the saved model in 'ER_const.py' e.g., SAVE_MODEL_FILENAME = TF_final
@@ -100,12 +108,12 @@ This will generate the preprocess images as numpy files in the the preprocess_da
     ````
 
 ### Test Engagement Model
-1. Download and untar the [trained model](https://cloudstor.aarnet.edu.au/plus/s/i3oPqcjXhG7Ymva) on the ER dataset
+1. Download and untar the trained model on the ER dataset
     ````
     wget https://cloudstor.aarnet.edu.au/plus/s/i3oPqcjXhG7Ymva/download
     tar -xzf download
     ````
-2. Create a directory called 'model' beside 'code' directory
+2. Create a directory called 'model' beside 'code' directory if you didn't before
 3. Place the files of the downloaded model in the the directory
     ````
     mv TF_final/* model/
