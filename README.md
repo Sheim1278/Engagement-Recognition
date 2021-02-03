@@ -103,6 +103,7 @@ This will generate the preprocess images as numpy files in the the preprocess_da
 4. Run the model's script:
     ````
    # Specify the name of the saved model in 'ER_const.py' e.g., SAVE_MODEL_FILENAME = TF_final
+   # uncomment self.model.load( join(SAVE_DIRECTORY, SAVE_MODEL_FILENAME), weights_only=True ) and restore=False in build_network(self) function
     cd code/
     python ER_model.py train
     ````
