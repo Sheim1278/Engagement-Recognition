@@ -74,7 +74,7 @@ class EmotionRecognition:
       max_checkpoints = None,
       tensorboard_verbose = 0
     )
-    self.model.load( join(SAVE_DIRECTORY, SAVE_MODEL_FILENAME), weights_only=True )
+    #self.model.load( join(SAVE_DIRECTORY, SAVE_MODEL_FILENAME), weights_only=True )
 
   def load_saved_dataset(self):
     self.dataset.load_from_save()
@@ -121,8 +121,9 @@ class EmotionRecognition:
 
       perfval = self.model.evaluate(self.dataset.images_valid, self.dataset._labels_valid)
       perftest = self.model.evaluate(self.dataset.images_test, self.dataset.labels_test)
-
-      print perfval, perftest
+      
+      # just for testing on sample data
+      print perftest
 
       predictval = self.model.predict(self.dataset.images_valid)
       predicttest = self.model.predict(self.dataset.images_test)
