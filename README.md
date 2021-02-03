@@ -125,6 +125,14 @@ This will generate the preprocess images as numpy files in the the preprocess_da
     cd code/
     python ER_model.py test
     ````
+ 5. Check predictions on sample data
+    ````
+    python2
+    
+    import numpy as np
+    predictions= np.load('test_f.npy')
+    print predictions
+    ````
     
 ### Results on the ER Test Set
 |                   | Accuracy     | F1 | AUC    |
