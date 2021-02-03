@@ -126,9 +126,10 @@ class EmotionRecognition:
 
       predictval = self.model.predict(self.dataset.images_valid)
       predicttest = self.model.predict(self.dataset.images_test)
-
-      np.save('VGGval_f.npy', predictval)
-      np.save('VGGtest_f.npy', predicttest)
+      
+      #just for testing on sample data
+      #np.save('val_f.npy', predictval)
+      np.save('test_f.npy', predicttest)
 
       return perftest
 
