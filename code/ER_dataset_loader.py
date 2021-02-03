@@ -1,6 +1,6 @@
 from os.path import join
 import numpy as np
-from VGG_const import *
+from ER_const import *
 
 class DatasetLoader(object):
 
