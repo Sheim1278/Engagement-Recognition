@@ -1,12 +1,12 @@
 from __future__ import division, absolute_import
 import numpy as np
-from VGG_dataset_loader import DatasetLoader
+from ER_dataset_loader import DatasetLoader
 import tflearn
 from tflearn.layers.core import input_data, dropout, fully_connected
 from tflearn.layers.conv import conv_2d, max_pool_2d
 from tflearn.layers.normalization import local_response_normalization
 from tflearn.layers.estimator import regression
-from VGG_const import *
+from ER_const import *
 from os.path import isfile, join
 import sys
 
